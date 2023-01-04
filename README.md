@@ -29,7 +29,8 @@ Cleaning the data was one of the most important steps. The null values were remo
 
 ## Creating dataframes according to the schema
 To transfer the entire data file into the database that was created, the text data had to be converted to rows and columns and this was done by creating dataframes for each entity.
-Creating unique IDs for CarID(using all fields), ListingID(seller website), dID(dealer_name and dealer_zip )
+
+## Creating unique IDs
 As there were three primary keys that were defined individually for each table and were not present in the datafile. The primary keys had to be given some unique values. To create unique values for the primary different approaches were followed as follows :
 
 *carID* - The carID was created using all the fields of the CarDescription table (“style”_ “driven_wheels”_”engine_”fuel_type”_”exterior_color”_”interior_color”)
@@ -67,9 +68,9 @@ The frontend has been tested on various user inputs :
 ## Bonus
 The following two factors/features are looked upon widely while buying a car :
 
-*Car trim* -  It defines a group of features for a particular car. The base model is the standard having a lower cost value whereas the higher trims are costly and have additional features, technology, and performance enhancements.
+*Car trim -  It defines a group of features for a particular car. The base model is the standard having a lower cost value whereas the higher trims are costly and have additional features, technology, and performance enhancements.
 
-*Car Engine* - While buying a car the buyer looks into the type of car engine and decides on the basis of his use if he/she wants a smaller engine to save up on fuel and travel smaller distances or one has to drive the vehicle to greater limits and want a bigger engine.
+*Car Engine - While buying a car the buyer looks into the type of car engine and decides on the basis of his use if he/she wants a smaller engine to save up on fuel and travel smaller distances or one has to drive the vehicle to greater limits and want a bigger engine.
 
 Incorporating the trim, engine factor in the search will give a more accurate market value estimate.
 
