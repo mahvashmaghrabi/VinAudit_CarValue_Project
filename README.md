@@ -55,13 +55,14 @@ The code in the app.py file creates the first endpoint to the search page. It re
 
 ## Testing the Frontend 
 The frontend has been tested on various user inputs :
-When the user enters only the make or the year or the model of the car alone the error is handled and the user is advised to provide the missing details.
 
-If the user enters a year which is not in the present or will be upcoming in the future, that is, any year greater than 2023 will throw an error stating to enter a valid year.
+* When the user enters only the make or the year or the model of the car alone the error is handled and the user is advised to provide the missing details.
 
-If the user does not enter any value and directly clicks on the search button then the user is suggested to enter all details to proceed further.
+* If the user enters a year which is not in the present or will be upcoming in the future, that is, any year greater than 2023 will throw an error stating to enter a valid year.
 
-If the user enters a car mileage value which is negative or is zero then throw an error mentioning that the car mileage is invalid
+* If the user does not enter any value and directly clicks on the search button then the user is suggested to enter all details to proceed further.
+
+* If the user enters a car mileage value which is negative or is zero then throw an error mentioning that the car mileage is invalid
 
 ## Bonus
 The following two factors/features are looked upon widely while buying a car :
