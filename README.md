@@ -31,8 +31,11 @@ Cleaning the data was one of the most important steps. The null values were remo
 To transfer the entire data file into the database that was created, the text data had to be converted to rows and columns and this was done by creating dataframes for each entity.
 Creating unique IDs for CarID(using all fields), ListingID(seller website), dID(dealer_name and dealer_zip )
 As there were three primary keys that were defined individually for each table and were not present in the datafile. The primary keys had to be given some unique values. To create unique values for the primary different approaches were followed as follows :
+
 *carID* - The carID was created using all the fields of the CarDescription table (“style”_ “driven_wheels”_”engine_”fuel_type”_”exterior_color”_”interior_color”)
+
 *dID* - The dealer was created using two fields of the Dealer table (“dealer_name”_”dealer_zip”)
+
 *listingID* - The listingID was created using the seller_website domain name alone replacing the remaining URL.
 
 ## Importing Data Frames to Database tables.
@@ -53,8 +56,11 @@ The code in the app.py file creates the first endpoint to the search page. It re
 ## Testing the Frontend 
 The frontend has been tested on various user inputs :
 When the user enters only the make or the year or the model of the car alone the error is handled and the user is advised to provide the missing details.
+
 If the user enters a year which is not in the present or will be upcoming in the future, that is, any year greater than 2023 will throw an error stating to enter a valid year.
+
 If the user does not enter any value and directly clicks on the search button then the user is suggested to enter all details to proceed further.
+
 If the user enters a car mileage value which is negative or is zero then throw an error mentioning that the car mileage is invalid
 
 ## Bonus
