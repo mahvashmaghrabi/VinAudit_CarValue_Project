@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/index.css">
+    </head>
+    <body>
+        <h1>VinAudit - Car Value</h1>
+        <form class="searchBox" method="post" action="" style="margin:auto;max-width:600px">
+            <input type="text" placeholder="Enter Year" name="car_year">
+            <input type="text" placeholder="Enter Make" name="car_make">
+            <input type="text" placeholder="Enter Model " name="car_model">
+            <input type="text" placeholder="Enter Mileage" name="car_mileage">
+		    </br>
+            <button type="submit"><i>Search</i></button>
+        </form>
+        <br>
+        <br>
+        <div id="displayError">
+            {% if error_msg == "" %}
+                <p></p>
+            {% else %}
+                <p> {{ error_msg }} </p>
+            {% endif %}
+        </div>
+        <p>Average Price for the Vehicle : {{ avg }} </p>
+
+        <table border="1" class="dataframe">
+        <thead>
+        <tr style="text-align: center;">
+            <th>Vehicle</th>
+            <th>Price</th>
+            <th>Mileage</th>
+            <th>Location</th>
+        </tr>
+        </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{row[0]}} {{row[1]}} {{row[2]}} {{row[3]}}</td>
+                    <td>{{row[4]}}</td>
+                    <td>{{row[5]}}</td>
+                    <td>{{row[6]}} , {{row[7]}} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
