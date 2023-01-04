@@ -6,11 +6,16 @@ The first task was to connect the MySQL database in Python and import necessary 
 ## Creating the database schema
 Downloaded the Full Market Data File that was provided. Spend time understanding the data file and skim reading the file. Created a Normalised Relational Schema keeping in mind all the Normal forms (1NF, 2NF, 3NF, BCNF) The schema has tables and relationships between different entities.
 There were 25 attributes in all. Five tables were created namely :
+
 *Car* - vin, year, make, model, trim
+
 *CarDescription* - carID, style, driven_wheels, engine, fuel_type, exterior_color, interior_color
+
 *Dealer* - dID, dealer_name, dealer_street, dealer_city, dealer_state, dealer_zip
+
 *Listing* - listingID, listing_price, listing_mileage, listing_status, used, certified, seller_website, first_seen_date, last_seen_date, dealer_vdp_last_seen_date
-* Id * - vin(FK), carID(FK), dID(FK), listingID(FK)
+
+*Id* - vin(FK), carID(FK), dID(FK), listingID(FK)
 All tables have unique primary keys. The Id table has three foreign keys which are referenced to primary keys in the respective table. 
 
 ## Creating the database
