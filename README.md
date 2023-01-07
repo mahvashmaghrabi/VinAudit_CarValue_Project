@@ -65,6 +65,9 @@ The frontend has been tested on various user inputs :
 
 * If the user enters a car mileage value which is negative or is zero then throw an error mentioning that the car mileage is invalid
 
+## Technical Challenge
+Used Linear Regression to account for the mileage input when estimating the market value. The target variable for linear regression was the listing_price. The model was trained on year, make and listing_mileage. The year and listing_mileage were numerical values and car make was a categorical value which was handled using One Hot Encoder. Whenever the user gives a mileage input the user gets an estimated value of car whereas when the user doesn't give the mileage it mentions that the estimated value can only be given if mileage is provided.
+
 ## Bonus
 The following two factors/features are looked upon widely while buying a car :
 
